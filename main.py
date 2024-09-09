@@ -1,5 +1,5 @@
 #Required libraries: Selenium
-#This is a simple scraper from pesuacademy!
+#This is a simple scraper for pesuacademy!
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
