@@ -31,15 +31,15 @@ while True:
         prn=f"PES{campus}{year}00{number}"
     if number>999:
         prn=f"PES{campus}{year}0{number}"
-    #kcsb=WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"knowClsSectionModalLoginId")))
-    kcsb=driver.find_element(By.ID,"knowClsSectionModalLoginId")
+    kcsb=WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.ID,"knowClsSectionModalLoginId")))
+    #kcsb=driver.find_element(By.ID,"knowClsSectionModalLoginId")
     kcsb.clear()
     kcsb.send_keys(prn+Keys.ENTER)
     number+=1
     time.sleep(0.1)
     try: 
-        tbdy=driver.find_element(By.XPATH,'//*[@id="knowClsSectionModalTableDate"]')
-        #tbdy=WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH,'//*[@id="knowClsSectionModalTableDate"]')))
+        #tbdy=driver.find_element(By.XPATH,'//*[@id="knowClsSectionModalTableDate"]')
+        tbdy=WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.XPATH,'//*[@id="knowClsSectionModalTableDate"]')))
         for tr in tbdy.find_elements(By.XPATH,'//tr'):
             row=[item.text for item in tr.find_elements(By.XPATH,'.//td')]
             if any(row):
