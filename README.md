@@ -1,4 +1,4 @@
-# pesuacademyscraper <deprecated>
+# pesuacademyscraper (deprecated)
 This scrapes available details of students in PESU through Know your class and section element in pesuacademy (now deprecated).
 Works using Selenium.
 Requires a web driver in the same folder as the main.py file. 
